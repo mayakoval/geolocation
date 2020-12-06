@@ -1,9 +1,16 @@
-<h1>Book your appointment with dr <%= @doctor.surname %>
-<%= simple_form_for [ @doctor, @appointment ] do |f| %>
-  <%= f.input :user_name %>
-  <%= f.input :email %>
-  <%= f.input :date %>
-  <%= f.input :time %>
-  <%= f.input :nhs_number %>
-  <%= f.submit value: "Book your appointment", class: "btn btn-warning button w-100", id: "create-trip-placement" %>
-<% end %>
+<div class="container">
+	<div class="pb-5 px-3">
+	<h1>Book your appointment with dr <%= @doctor.surname %></h1>
+	<h4>Please fill out the form below to create your appointment</h4>
+		<%= simple_form_for [ @doctor, @appointment ] do |f| %>
+		  <%= "Select date and timeslot" %>
+		  <%= f.input :date, html5: true %>
+		  <%= f.input :time, html5: true %>
+		  <%= f.input :user_name, label: "Full name" %>
+		  <%= f.input :email, label: "Email address" %>
+		  <%= f.input :nhs_number, label: "NHS Number (optional)" %>
+		  <%= f.submit value: "Book Appointment", class: "btn btn-dark" %>
+		<% end %>
+	<%= link_to 'Back', doctors_path(@doctor) %>
+	</div>
+</div>
