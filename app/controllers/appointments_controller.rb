@@ -12,13 +12,14 @@ class AppointmentsController < ApplicationController
 
 	def show
     @appointment = Appointment.find(params[:id])
+    @doctor = @appointment.doctor
   end
 
 	def create
     @appointment = Appointment.new(appointment_params)
     @appointment.doctor = @doctor
     if @appointment.save
-      redirect_to doctor_appointment_path(@appointment, id: @doctor.id)
+      redirect_to appointment_path(@appointment)
     else
       render :new
     end
