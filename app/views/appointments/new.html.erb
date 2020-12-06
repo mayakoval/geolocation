@@ -1,0 +1,9 @@
+<h1>Book your appointment with dr <%= @doctor.surname %>
+<%= simple_form_for [ @doctor, @appointment ] do |f| %>
+  <%= f.input :user_name %>
+  <%= f.input :email %>
+  <%= f.input :date %>
+  <%= f.input :time %>
+  <%= f.input :nhs_number %>
+  <%= f.submit value: "Book your appointment", class: "btn btn-warning button w-100", id: "create-trip-placement" %>
+<% end %>
