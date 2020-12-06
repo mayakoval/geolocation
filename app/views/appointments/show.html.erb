@@ -3,6 +3,7 @@
 		<h1>Appointment booked</h1>
 		<h6>Thanks, you've made a booking with...</h6>
 		<h2>Dr. <%= @appointment.doctor.forename %> <%= @appointment.doctor.surname %></h2>
+		<h4><%= @appointment.doctor.specialty %></h4>
 			<ul style="list-style: circle">
 				<li><%= @appointment.doctor.address %></li>
 				<li><%= @appointment.doctor.description %></li>
