@@ -4,8 +4,8 @@ class PagesController < ApplicationController
 
 		@markers = @doctors.geocoded.map do |doctor|
     {
-      lat: flat.latitude,
-      lng: flat.longitude
+      lat: doctor.latitude,
+      lng: doctor.longitude
     }
     end
   end
