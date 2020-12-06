@@ -1,0 +1,14 @@
+<div class="container">
+	<div class="pb-5 px-3">
+		<h1>Appointment booked</h1>
+		<h6>Thanks, you've made a booking with...</h6>
+		<h2>Dr. <%= @appointment.doctor.forename %> <%= @appointment.doctor.surname %></h2>
+			<ul style="list-style: circle">
+				<li><%= @appointment.doctor.address %></li>
+				<li><%= @appointment.doctor.description %></li>
+				<li><%= @appointment.date %></li><li><%= @appointment.time %></li>
+			</ul>
+		<h6>We've sent a booking confirmation to the email address you provided.</h6>
+		<%= link_to 'Back', doctors_path(@doctor), class: "btn btn-dark" %>
+	</div>
+</div>

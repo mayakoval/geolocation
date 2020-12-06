@@ -1,3 +1,6 @@
-<h2><%= doctor.forename %> <%= doctor.surname %></h2>
-<h3><%= doctor.specialty %></h3>
-<p><%= link_to "Book appointment", new_doctor_appointment_path(doctor), class: "btn btn-primary" %></p>
+<h2>Dr. <%= doctor.forename %> <%= doctor.surname %></h2>
+<ul style="list-style: circle">
+	<li><%= doctor.address %></li>
+	<li><%= doctor.description %></li>
+</ul>
+<p><%= link_to "Book appointment", new_doctor_appointment_path(doctor), class: "btn btn-dark" %></p>
