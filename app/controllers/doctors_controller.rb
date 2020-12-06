@@ -9,7 +9,8 @@ class DoctorsController < ApplicationController
 	  @markers = @doctors.geocoded.map do |doctor|
     {
       lat: doctor.latitude,
-      lng: doctor.longitude
+      lng: doctor.longitude,
+      infoWindow: render_to_string(partial: "info_window", locals: { doctor: doctor })
     }
     end
 	end
