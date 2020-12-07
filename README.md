@@ -1,1 +1,3 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+An app created with Ruby on Rails.
+
+You can find the website here: https://doctor-geolocator.herokuapp.com/
